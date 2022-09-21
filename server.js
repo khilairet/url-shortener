@@ -46,7 +46,7 @@ app.post('/api/url/short', async (req, res, next) => {
     let urls = JSON.parse(urlsRaw);
   
     // generate custom unique shortenUrl with date
-    // const id = shortenUrl(urls);
+    // const id = shortenUrl();
   
     // generate shortenUrl by library
     const id = generate('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 6);
@@ -65,9 +65,7 @@ app.listen(port, () => {
   console.log(`Server started at http://localhost:${port}`);
 });
 
-function shortenUrl(urls) {
-  console.log("test4");
-
+function shortenUrl() {
   const charset = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const now = new Date();
   const keys = [
