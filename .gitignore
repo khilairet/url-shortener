@@ -1,0 +1,5 @@
+package-lock.json
+.vscode
+.history
+node_modules/
+context.pdf
